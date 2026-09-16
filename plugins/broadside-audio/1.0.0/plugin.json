@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "broadside-audio",
+  "version": "1.0.0",
+  "name": "Audio preview scraper",
+  "backend": "backend.js",
+  "permissions": [
+    "http.read",
+    "library.read",
+    "library.capture"
+  ],
+  "network": {
+    "hosts": [
+      "hooksounds.com",
+      "www.hooksounds.com",
+      "static.hooksounds.com",
+      "prosoundeffects.com",
+      "www.prosoundeffects.com",
+      "prosoundeffects.blob.core.windows.net"
+    ]
+  },
+  "widget": {
+    "id": "previews",
+    "title": "Audio previews",
+    "kind": "records",
+    "stateVersion": 1,
+    "source": "library",
+    "input": {
+      "label": "Source URL",
+      "action": "capture",
+      "actionLabel": "Capture"
+    },
+    "columns": [
+      {
+        "id": "name",
+        "label": "Title"
+      },
+      {
+        "id": "provider",
+        "label": "Source"
+      },
+      {
+        "id": "durationLabel",
+        "label": "Duration"
+      },
+      {
+        "id": "licenseNote",
+        "label": "License"
+      },
+      {
+        "id": "sourceUrl",
+        "label": "Original page"
+      }
+    ]
+  }
+}
