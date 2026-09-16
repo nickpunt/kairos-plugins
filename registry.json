@@ -1,1 +1,78 @@
-{"schemaVersion":1,"plugins":[]}
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "broadside-audio",
+      "name": "Audio preview scraper",
+      "description": "Capture public HookSounds and Pro Sound Effects audition previews with license provenance.",
+      "author": "nickpunt",
+      "latest": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "https://github.com/nickpunt/kairos-plugins/releases/download/broadside-audio-v1.0.0/broadside-audio-1.0.0.kairos-plugin.json",
+          "digest": "5056395d210150a961abb2c28da06e1c87fe8c2026d8fa03ccdb9f68081fb1c0",
+          "manifest": {
+            "schemaVersion": 1,
+            "id": "broadside-audio",
+            "version": "1.0.0",
+            "name": "Audio preview scraper",
+            "backend": "backend.js",
+            "permissions": [
+              "http.read",
+              "library.read",
+              "library.capture"
+            ],
+            "network": {
+              "hosts": [
+                "hooksounds.com",
+                "www.hooksounds.com",
+                "static.hooksounds.com",
+                "prosoundeffects.com",
+                "www.prosoundeffects.com",
+                "prosoundeffects.blob.core.windows.net"
+              ]
+            },
+            "widget": {
+              "id": "previews",
+              "title": "Audio previews",
+              "kind": "records",
+              "stateVersion": 1,
+              "source": "library",
+              "input": {
+                "label": "Source URL",
+                "action": "capture",
+                "actionLabel": "Capture"
+              },
+              "columns": [
+                {
+                  "id": "name",
+                  "label": "Title"
+                },
+                {
+                  "id": "provider",
+                  "label": "Source"
+                },
+                {
+                  "id": "durationLabel",
+                  "label": "Duration"
+                },
+                {
+                  "id": "licenseNote",
+                  "label": "License"
+                },
+                {
+                  "id": "sourceUrl",
+                  "label": "Original page"
+                }
+              ]
+            }
+          },
+          "source": "https://github.com/nickpunt/kairos-plugins/tree/broadside-audio-v1.0.0/plugins/broadside-audio/1.0.0",
+          "review": "unreviewed",
+          "provenance": "https://github.com/nickpunt/kairos-plugins/blob/broadside-audio-v1.0.0/plugins/broadside-audio/1.0.0/PROVENANCE.md"
+        }
+      ]
+    }
+  ]
+}
